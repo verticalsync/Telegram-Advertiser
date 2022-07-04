@@ -7,16 +7,7 @@ from colorama import Fore
 clear = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 
 clear()
-os.system("title " + "Telegram Advertiser - Made by dart (more like purpl3r0se)")
-print(f"""{Fore.RED}
-d888888b d88888b db      d88888b  d888b  d8888b.  .d8b.  .88b  d88.    .d8b.  d8888b. db    db 
-`~~88~~' 88'     88      88'     88' Y8b 88  `8D d8' `8b 88'YbdP`88   d8' `8b 88  `8D 88    88 
-   88    88ooooo 88      88ooooo 88      88oobY' 88ooo88 88  88  88   88ooo88 88   88 Y8    8P 
-   88    88~~~~~ 88      88~~~~~ 88  ooo 88`8b   88~~~88 88  88  88   88~~~88 88   88 `8b  d8' 
-   88    88.     88booo. 88.     88. ~8~ 88 `88. 88   88 88  88  88   88   88 88  .8D  `8bd8'  
-   YP    Y88888P Y88888P Y88888P  Y888P  88   YD YP   YP YP  YP  YP   YP   YP Y8888D'    YP    
-                                                                                                                                                                                                                                                                                                                          
-{Fore.WHITE}""")
+os.system("title Telegram Advertiser ^| purpl3r0se#0001")
 
 with open("config.txt", "a+") as config:
     config.seek(0)
@@ -40,8 +31,8 @@ with open("config.txt", "a+") as config:
 client = TelegramClient('anon', api_id, api_hash)
 
 groups = open("groups.txt", "r+").read().strip().split("\n")
+message = open("message.txt", "r+", encoding="utf8").read().strip()
 found_groups = []
-message = open("message.txt", "r+").read().strip()
 
 wait1 = int(input(f"{Fore.WHITE}[{Fore.MAGENTA}?{Fore.WHITE}]{Fore.RESET} How long do you want to wait between each message? (seconds): "))
 wait2 = int(input(f"{Fore.WHITE}[{Fore.MAGENTA}?{Fore.WHITE}]{Fore.RESET} How long do you want to wait after all groups have been messaged? (seconds): "))
@@ -62,7 +53,8 @@ async def x():
         if group.lower() not in v:
             print(f"{Fore.WHITE}[{Fore.RED}!{Fore.WHITE}]{Fore.RESET} Group {group} not found")
 
-    print("")
+    time.sleep(3)
+    os.system("cls")
 
     while True:
         for found_group in found_groups:
