@@ -1,0 +1,2 @@
+-0
+-- make sure first line is the group id, it'll fetch the first message it sees aka most recent one
