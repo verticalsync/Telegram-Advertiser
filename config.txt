@@ -1,2 +1,1 @@
-x:y
--- api_id:api_hash
+api_id:api_hash
