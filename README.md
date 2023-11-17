@@ -1,3 +1,6 @@
+# The code in this sucks, and is not maintained, and is relatively difficult to use as it could be simplified. I don't suggest using this, find a different one instead.
+# There is a possibility of where I re-code this, but it's not high.
+# -
 # Telegram Advertiser
 
 ## Installation
